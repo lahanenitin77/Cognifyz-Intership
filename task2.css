@@ -1,0 +1,526 @@
+/* ===========================
+   GOOGLE FONT
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#F8FAFC;
+    color:#222;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+header{
+    position:sticky;
+    top:0;
+    width:100%;
+    background:#2563EB;
+    color:white;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:1000;
+}
+
+header h2{
+    font-size:30px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:30px;
+    font-weight:600;
+    position:relative;
+}
+
+nav a::after{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    width:0%;
+    height:3px;
+    background:#F59E0B;
+    transition:.4s;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:80px 8%;
+    min-height:90vh;
+}
+
+.hero-text{
+    width:55%;
+}
+
+.hero-text h1{
+    font-size:55px;
+    margin-bottom:15px;
+}
+
+.hero-text h2{
+    color:#2563EB;
+    margin-bottom:20px;
+    height:40px;
+}
+
+.hero-text p{
+    font-size:20px;
+    line-height:35px;
+}
+
+.hero-image img{
+    width:430px;
+    border-radius:20px;
+    box-shadow:0 20px 40px rgba(0,0,0,.2);
+    animation:float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+
+0%,100%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-18px);
+}
+
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+button{
+
+padding:15px 30px;
+
+margin-top:25px;
+
+border:none;
+
+border-radius:30px;
+
+background:#2563EB;
+
+color:white;
+
+font-size:17px;
+
+cursor:pointer;
+
+transition:.4s;
+
+}
+
+button:hover{
+
+transform:translateY(-5px);
+
+background:#F59E0B;
+
+}
+
+/* ===========================
+   CLOCK
+=========================== */
+
+.clock-section{
+
+padding:80px 8%;
+
+text-align:center;
+
+}
+
+.clock-section h2{
+
+font-size:40px;
+
+color:#2563EB;
+
+margin-bottom:25px;
+
+}
+
+#clock{
+
+display:inline-block;
+
+padding:20px 40px;
+
+font-size:28px;
+
+background:white;
+
+border-radius:12px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+/* ===========================
+   CALCULATOR
+=========================== */
+
+#calculator{
+
+padding:80px 8%;
+
+text-align:center;
+
+}
+
+#calculator h2{
+
+font-size:40px;
+
+color:#2563EB;
+
+margin-bottom:40px;
+
+}
+
+.calculator{
+
+max-width:600px;
+
+margin:auto;
+
+background:white;
+
+padding:40px;
+
+border-radius:20px;
+
+box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+}
+
+.calculator input{
+
+width:100%;
+
+padding:15px;
+
+margin:15px 0;
+
+border:2px solid #ddd;
+
+border-radius:10px;
+
+font-size:18px;
+
+outline:none;
+
+}
+
+.calculator input:focus{
+
+border-color:#2563EB;
+
+}
+
+.buttons{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:15px;
+
+margin:25px 0;
+
+}
+
+.buttons button{
+
+margin:0;
+
+}
+
+#result{
+
+font-size:28px;
+
+color:#2563EB;
+
+margin-top:20px;
+
+}
+
+/* ===========================
+   CONTACT
+=========================== */
+
+#contact{
+
+padding:80px 8%;
+
+text-align:center;
+
+}
+
+#contact h2{
+
+font-size:40px;
+
+color:#2563EB;
+
+margin-bottom:35px;
+
+}
+
+form{
+
+max-width:700px;
+
+margin:auto;
+
+display:flex;
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+form input,
+form textarea{
+
+padding:16px;
+
+font-size:17px;
+
+border:2px solid #ddd;
+
+border-radius:12px;
+
+outline:none;
+
+}
+
+form input:focus,
+form textarea:focus{
+
+border-color:#2563EB;
+
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+
+margin-top:80px;
+
+background:#2563EB;
+
+color:white;
+
+text-align:center;
+
+padding:35px;
+
+}
+
+.icons{
+
+margin-top:20px;
+
+}
+
+.icons i{
+
+font-size:32px;
+
+margin:0 15px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.icons i:hover{
+
+color:#F59E0B;
+
+transform:scale(1.2);
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:900px){
+
+.hero{
+
+flex-direction:column-reverse;
+
+text-align:center;
+
+}
+
+.hero-text{
+
+width:100%;
+
+margin-top:40px;
+
+}
+
+.hero-image img{
+
+width:300px;
+
+}
+
+.hero-text h1{
+
+font-size:42px;
+
+}
+
+header{
+
+flex-direction:column;
+
+}
+
+nav{
+
+margin-top:15px;
+
+}
+
+.buttons{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+/* =====================================
+   FADE IN ANIMATION
+===================================== */
+
+.hidden{
+    opacity:0;
+    transform:translateY(80px);
+    transition:all 0.8s ease;
+}
+
+.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* =====================================
+   TYPING CURSOR EFFECT
+===================================== */
+
+#typing{
+    color:#2563EB;
+    font-weight:700;
+    border-right:3px solid #2563EB;
+    white-space:nowrap;
+    overflow:hidden;
+    animation:blink .7s infinite;
+}
+
+@keyframes blink{
+
+0%{
+border-color:#2563EB;
+}
+
+50%{
+border-color:transparent;
+}
+
+100%{
+border-color:#2563EB;
+}
+
+}
+
+/* =====================================
+   BUTTON COLOR TRANSITION
+===================================== */
+
+#colorBtn{
+    transition:0.4s;
+}
+
+/* =====================================
+   CALCULATOR BUTTON HOVER
+===================================== */
+
+.buttons button:hover{
+    background:#F59E0B;
+    transform:scale(1.08);
+}
+
+/* =====================================
+   CONTACT FORM EFFECT
+===================================== */
+
+form input:focus,
+form textarea:focus{
+    border:2px solid #2563EB;
+    box-shadow:0 0 15px rgba(37,99,235,.3);
+}
+
+/* =====================================
+   FOOTER ICON ANIMATION
+===================================== */
+
+.icons i{
+    transition:.3s;
+}
+
+.icons i:hover{
+    color:#F59E0B;
+    transform:translateY(-6px) scale(1.2);
+}
+
+/* =====================================
+   CLOCK EFFECT
+===================================== */
+
+#clock{
+    color:#2563EB;
+    font-weight:bold;
+}
